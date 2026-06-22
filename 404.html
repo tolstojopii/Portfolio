@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Перенаправление...</title>
+  <script>
+    var path = window.location.pathname;
+    var cleanPath = path.replace(/^\/Portfolio/, '');
+    window.location.href = '/Portfolio/' + '?path=' + cleanPath;
+  </script>
+</head>
+<body>
+  <p>Перенаправление...</p>
+</body>
+</html>
