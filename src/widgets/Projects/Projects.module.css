@@ -1,0 +1,32 @@
+.title h2 {
+  font-size: 44px;
+}
+
+.title p {
+  font-size: 20px;
+  color: var(--text-secondary);
+}
+
+.section {
+  padding: 80px 0;
+  background-color: var(--bg-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+@media (max-width: 1364px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

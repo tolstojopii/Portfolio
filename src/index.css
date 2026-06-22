@@ -1,0 +1,32 @@
+:root {
+  --bg-primary: #0B0E14;
+  --bg-secondary: #141A24;
+  --accent: #6C63FF;
+  --accent-secondary: #00D4FF;
+  --text-primary: #E8EDF2;
+  --text-secondary: #A0ABB8;
+  
+  --container-max: 1280px;
+  --section-padding: 96px 0; 
+  
+
+  --font-family: 'Inter', sans-serif;
+  --font-size-base: 16px;
+  
+
+  --radius: 16px;
+  --radius-sm: 8px;
+
+
+  --accent: #6C63FF;
+  --accent-secondary: #00D4FF;
+
+  
+}
+
+
+body {
+  background-color: #0B0E14;
+  margin: 0;
+  padding: 0;
+}

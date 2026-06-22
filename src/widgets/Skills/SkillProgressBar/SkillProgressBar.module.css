@@ -1,0 +1,67 @@
+.skill{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.skillInfo{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skillName{
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.skillLevel{
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.progressTrack{
+  height: 6px;
+  background: rgba(11, 14, 20, 0.5);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progressFill{
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+  border-radius: 8px;
+}
+
+@media (max-width: 1024px) {
+  .achievements {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  }
+  
+  .categories {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 32px;
+  }
+  
+  .achievements {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .achievementNumber {
+    font-size: 24px;
+  }
+  
+  .achievement {
+    padding: 16px;
+  }
+}

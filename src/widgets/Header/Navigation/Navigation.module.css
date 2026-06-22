@@ -1,0 +1,42 @@
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.link {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 0;
+  position: relative;
+  transition: color 0.3s ease;
+  font-family: inherit;
+}
+
+.link:hover {
+  color: var(--text-primary);
+}
+
+.underline {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+  transition: width 0.3s ease;
+}
+
+.link:hover .underline {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none; 
+  }
+}

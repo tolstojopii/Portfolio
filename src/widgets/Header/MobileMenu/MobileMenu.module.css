@@ -1,0 +1,144 @@
+.menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.menu.open {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 320px;
+  max-width: 85%;
+  background: rgba(20, 26, 36, 0.98); 
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 80px 32px 32px;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid rgba(108, 99, 255, 0.15);
+  box-shadow: -8px 0 40px rgba(0, 0, 0, 0.5);
+}
+
+.menu.open .content {
+  transform: translateX(0);
+}
+
+.closeButton {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  padding: 8px;
+  transition: all 0.3s ease;
+  z-index: 10;
+  border-radius: 8px;
+}
+
+.closeButton:hover {
+  color: var(--accent);
+  transform: rotate(90deg);
+  background: rgba(108, 99, 255, 0.1);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 20px;
+  flex: 1;
+}
+
+.link {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 28px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 12px 0;
+  text-align: left;
+  transition: all 0.3s ease;
+  font-family: inherit;
+  position: relative;
+  border-bottom: 1px solid rgba(108, 99, 255, 0.06);
+}
+
+.link:hover {
+  color: var(--text-primary);
+}
+
+.linkUnderline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-secondary));
+  transition: width 0.3s ease;
+}
+
+.link:hover .linkUnderline {
+  width: 40px;
+}
+
+.footer {
+  margin-top: auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(108, 99, 255, 0.1);
+}
+
+.footer p {
+  font-size: 14px;
+  color: var(--text-secondary);
+  opacity: 0.6;
+}
+
+@media (max-width: 480px) {
+  .content {
+    width: 100%;
+    max-width: 100%;
+    padding: 80px 24px 24px;
+  }
+
+  .link {
+    font-size: 24px;
+    padding: 10px 0;
+  }
+
+  .closeButton {
+    top: 16px;
+    right: 16px;
+  }
+}
+
+@media (min-width: 769px) {
+  .menu {
+    display: none;
+  }
+}

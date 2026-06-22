@@ -1,0 +1,10 @@
+.layout{
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+}
+
+.main{
+  padding-top: 80px;
+}

@@ -1,0 +1,73 @@
+.techGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.techItem{
+  background: rgba(20, 26, 36, 0.5);
+  backdrop-filter: blur(4px);
+  border-radius: 12px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(4px);
+  cursor: default;
+  position: relative;
+  overflow: hidden;
+}
+
+.techItem:hover{
+  transform: translateY(-4px);
+  border-color: rgba(108, 99, 255, 0.6);
+  box-shadow: 0 8px 30px rgba(108, 99, 255, 0.15);
+}
+
+
+
+.section {
+  background-color: rgb(16, 18, 33);
+  padding: 80px 0;
+}
+
+.bio {
+  border-radius: 16px;
+  max-width: 700px;
+  margin: 0 auto 48px;
+  padding: 16px 24px;
+  border: 1px solid rgba(108, 99, 255, 0.2);
+  background: rgba(20, 26, 36, 0.5);
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.bio:hover {
+  border-color: rgba(108, 99, 255, 0.4);
+  box-shadow: 0 0 40px rgba(108, 99, 255, 0.1);
+}
+
+.bio p {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+.title h2 {
+  font-size: 44px;
+}
+
+.title p {
+  font-size: 20px;
+  color: var(--text-secondary);
+}
+

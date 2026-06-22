@@ -1,0 +1,27 @@
+.title h2 {
+  font-size: 44px;
+}
+
+.title p {
+  font-size: 20px;
+  color: var(--text-secondary);
+}
+
+.section {
+  padding: 80px 0;
+  background-color: var(--bg-secondary);
+}
+
+
+
+@media (max-width: 1024px) {
+  .grid {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 60px 0;
+  } 
+}
